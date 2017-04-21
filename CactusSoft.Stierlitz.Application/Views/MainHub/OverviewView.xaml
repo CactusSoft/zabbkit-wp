@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="CactusSoft.Stierlitz.Application.Views.MainHub.OverviewView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:triggers="clr-namespace:CactusSoft.Stierlitz.Application.Interactivity"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}">
+
+    <Grid x:Name="LayoutRoot" Margin="12,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer>
+            <ItemsControl Grid.Row="0"
+                          Margin="0,-6,0,0"
+                          ItemsSource="{Binding Items}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{StaticResource TextButtonStyle}"
+                                cal:Message.Attach="[Event Tap] = [Action NavigateToHosts($dataContext)]"
+                                Margin="0,12,0,0" Content="{Binding Name}">
+                        
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <i:Interaction.Behaviors>
+                    <triggers:ItemsControlBehavior />
+                </i:Interaction.Behaviors>
+            </ItemsControl>
+        </ScrollViewer>
+        <TextBlock Grid.Row="0"
+                   TextWrapping="Wrap"
+                   Visibility="{Binding IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"
+                   Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.NoHostGroupsFound}">
+        </TextBlock>
+        <Button Grid.Row="1"
+                Margin="0,0,0,104"
+                VerticalAlignment="Bottom"
+                Content="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.ViewAll}"
+                Style="{StaticResource TextButtonStyle}"
+                IsEnabled="{Binding IsEmpty, Converter={StaticResource BoolToInvertedBoolConverter}}"
+                cal:Message.Attach="[Event Tap] = [Action NavigateToAllHostGroups]"/>
+    </Grid>
+</UserControl> 

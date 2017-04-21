@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="CactusSoft.Stierlitz.Application.UserControls.EventUserControl"
+    x:Name="EventControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+        <StackPanel Orientation="Horizontal" Margin="0,12,0,12">
+            <Rectangle Fill="{Binding Event, Converter={StaticResource EventViewModelToColorConverter}, ElementName=EventControl}"
+                                       VerticalAlignment="Top"
+                                       Margin="0,7,0,0"
+                                       Style="{StaticResource StatusRectangleStyle}"/>
+            <StackPanel Margin="{StaticResource DistanceBetweenStatusAndText}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.HostLabel, StringFormat=\{0\}:&#160; }"
+                                               FontSize="{StaticResource PhoneFontSizeMedium}"/>
+                    <TextBlock Text="{Binding Event.Hosts, Converter={StaticResource HostsToStringConverter}, ElementName=EventControl}"
+                                               TextWrapping="Wrap"
+                                               FontSize="{StaticResource PhoneFontSizeMedium}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.TriggerLabel, StringFormat=\{0\}:&#160; }"
+                                               FontSize="{StaticResource PhoneFontSizeMedium}"/>
+                    <TextBlock Text="{Binding Event.Trigger.Description, ElementName=EventControl}"
+                                               TextWrapping="Wrap"
+                                               FontSize="{StaticResource PhoneFontSizeMedium}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.Time, StringFormat=\{0\}:&#160; }" 
+                                               FontSize="{StaticResource PhoneFontSizeSmall}"
+                                               Style="{StaticResource DefaultPhoneTextAccentStyle}"/>
+                    <TextBlock Text="{Binding Event.BeginTime, ElementName=EventControl}"
+                                               FontSize="{StaticResource PhoneFontSizeSmall}"
+                                               Style="{StaticResource DefaultPhoneTextAccentStyle}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.Duration, StringFormat=\{0\}:&#160; }"
+                                                       FontSize="{StaticResource PhoneFontSizeSmall}"
+                                                       Style="{StaticResource DefaultPhoneTextAccentStyle}"/>
+                    <TextBlock Text="{Binding Event.Duration, Converter={StaticResource TimespanToDurationConverter}, ElementName=EventControl}"
+                                                       FontSize="{StaticResource PhoneFontSizeSmall}"
+                                                       Style="{StaticResource DefaultPhoneTextAccentStyle}"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+</UserControl>

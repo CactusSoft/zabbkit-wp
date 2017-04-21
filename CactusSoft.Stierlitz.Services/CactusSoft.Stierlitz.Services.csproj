@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{703F6843-215A-49F2-8656-60B03F90BE6D}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CactusSoft.Stierlitz.Services</RootNamespace>
+    <AssemblyName>CactusSoft.Stierlitz.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlurryWP7SDK">
+      <HintPath>..\packages\Flurry\FlurryWP7SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks" Condition="'$(VisualStudioVersion)'=='11.0'">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions" Condition="'$(VisualStudioVersion)'=='11.0'">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="AsyncCtpLibrary_Phone" Condition="'$(VisualStudioVersion)'!='11.0'">
+      <HintPath>..\packages\AsyncCTP\AsyncCtpLibrary_Phone.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.9\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Threading.Tasks" Condition="'$(VisualStudioVersion)'=='11.0'">
+      <HintPath>..\packages\Microsoft.Bcl.1.0.19\lib\sl4-windowsphone71\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Tequila.Phone.System.Extensions">
+      <HintPath>..\packages\Tequila\bin\$(Configuration)\Tequila.Phone.System.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Analitics\FlurryAnalytics.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Facades\FavoritesStorage.cs" />
+    <Compile Include="Facades\IFavoritesStorage.cs" />
+    <Compile Include="JsonConverters\OutputQueryConverter.cs" />
+    <Compile Include="Web\IDeviceManagementService.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixDataProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\IDataProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\Infrastructure\EventSortField.cs" />
+    <Compile Include="Web\ProxyServers\Infrastructure\SortOrderField.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixGraphsProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\IEventProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\IGraphsProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\Infrastructure\TriggersSortField.cs" />
+    <Compile Include="Web\ProxyServers\IServerChecker.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixEventProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\ITriggerProxyServer.cs" />
+    <Compile Include="Web\DeviceManagementService.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixTriggerProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\IHostProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\Infrastructure\Extensions.cs" />
+    <Compile Include="Web\ProxyServers\Infrastructure\HostSortField.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixHostProxyServer.cs" />
+    <Compile Include="Web\RequestBodies\Params\GetDataParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\DeviceParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\GetGraphsParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\GetEventsParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\GetTriggersParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\Base\GetSortedParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\GetHostsParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\Base\GetParams.cs" />
+    <Compile Include="Web\ProxyServers\Infrastructure\HostGroupsSortField.cs" />
+    <Compile Include="Web\Exceptions\NoInternetException.cs" />
+    <Compile Include="Web\Exceptions\ResponseParseException.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixServerChecker.cs" />
+    <Compile Include="Web\Configurations\IWebConfiguration.cs" />
+    <Compile Include="Web\Configurations\WebConfiguration.cs" />
+    <Compile Include="Web\Exceptions\AuthorizationException.cs" />
+    <Compile Include="Web\Exceptions\WebServiceException.cs" />
+    <Compile Include="Facades\UserManagmentFacade.cs" />
+    <Compile Include="Facades\IUserManagmentFacade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\Configurations\IServiceConfiguration.cs" />
+    <Compile Include="Web\ProxyServers\IHostGroupProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixHostGroupProxyServer.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixProxyServerBase.cs" />
+    <Compile Include="Web\RequestBodies\IRequestBodyBuilder.cs" />
+    <Compile Include="Web\ProxyServers\IUserProxyServer.cs" />
+    <Compile Include="Web\RequestBodies\Params\CheckParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\ApiVersionParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\GetHostGroupsParams.cs" />
+    <Compile Include="Web\ProxyServers\Infrastructure\Select.cs" />
+    <Compile Include="Web\RequestBodies\Params\LogoutParams.cs" />
+    <Compile Include="Web\RequestBodies\Params\Query.cs" />
+    <Compile Include="Web\ResponseBodies\Results\GetDataResult.cs" />
+    <Compile Include="Web\ResponseBodies\Results\GetDeviceIdResult.cs" />
+    <Compile Include="Web\ResponseBodies\Results\GetEventsResult.cs" />
+    <Compile Include="Web\ResponseBodies\Results\GetGraphsResult.cs" />
+    <Compile Include="Web\ResponseBodies\Results\GetTriggersResult.cs" />
+    <Compile Include="Web\ResponseBodies\Results\GetHostGroupsResult.cs" />
+    <Compile Include="Web\ResponseBodies\Results\ErrorResult.cs" />
+    <Compile Include="Web\ResponseBodies\Results\GetHostsResult.cs" />
+    <Compile Include="Web\RequestBodies\Params\IFilterParam.cs" />
+    <Compile Include="Web\WebChannel\IWebChannel.cs" />
+    <Compile Include="Web\RequestBodies\RequestBodyBuilder.cs" />
+    <Compile Include="Web\RequestBodies\ParamsRequestBody.cs" />
+    <Compile Include="Web\RequestBodies\Params\LoginParams.cs" />
+    <Compile Include="Web\RequestBodies\RequestBodyBase.cs" />
+    <Compile Include="Web\ResponseBodies\ResponseBodyBase.cs" />
+    <Compile Include="Web\ResponseBodies\ResultResponseBody.cs" />
+    <Compile Include="Web\ProxyServers\ZabbixUserProxyServer.cs" />
+    <Compile Include="Web\WebChannel\ZabbixWebChannel.cs" />
+    <Compile Include="Web\Configurations\ServiceConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CactusSoft.Stierlitz.Common\CactusSoft.Stierlitz.Common.csproj">
+      <Project>{AE4C93FF-E681-487D-9AFA-5C051384EDCC}</Project>
+      <Name>CactusSoft.Stierlitz.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CactusSoft.Stierlitz.Domain\CactusSoft.Stierlitz.Domain.csproj">
+      <Project>{685D057B-75D8-4BD1-A1D3-2B4147B2AE0C}</Project>
+      <Name>CactusSoft.Stierlitz.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.5\tools\Microsoft.Bcl.Build.targets" Condition="'$(VisualStudioVersion)'=='11.0'" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

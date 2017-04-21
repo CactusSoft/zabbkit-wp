@@ -1,0 +1,130 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:telerikCore="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core"
+                    xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+                    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+
+    <Style x:Name="DefaultPhoneApplicationPageStyle" TargetType="phone:PhoneApplicationPage">
+        <Setter Property="shell:SystemTray.IsVisible" Value="True"/>
+        <Setter Property="shell:SystemTray.Opacity" Value="0"/>
+        <Setter Property="telerikCore:InteractionEffectManager.IsInteractionEnabled" Value="True"/>
+    </Style>
+    
+    <Style x:Key="DefaultPhoneApplicationPageWithRadTileTransitionStyle" TargetType="phone:PhoneApplicationPage" 
+           BasedOn="{StaticResource DefaultPhoneApplicationPageStyle}">
+        <Setter Property="telerikPrimitives:RadTransitionControl.Transition">
+            <Setter.Value>
+                <telerikPrimitives:RadTileTransition/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="AnimatedRadDataBoundListBoxStyle" TargetType="telerikPrimitives:RadDataBoundListBox">       
+        <Setter Property="ItemAnimationMode" Value="PlayAll"/>
+    </Style>
+
+    <Style x:Key="ZabbixItemsRadDataBoundListBoxStyle" TargetType="telerikPrimitives:RadDataBoundListBox"
+           BasedOn="{StaticResource AnimatedRadDataBoundListBoxStyle}">
+        <Setter Property="ListFooterTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentControl Margin="0,0,0,72"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="EmptyContent" Value="{x:Null}"/>
+    </Style>
+
+    <Style x:Key="ScrollableItemsControlStyle" TargetType="ItemsControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <ScrollViewer>
+                        <ItemsPresenter Margin="0,0,0,72"/>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="CaptionTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="Margin" Value="12,0,0,0"/>
+    </Style>
+
+    <Style x:Key="EmptyButtonStyle" TargetType="ButtonBase">
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ButtonBase">
+                    <Grid Background="Transparent">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentContainer" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneDisabledBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBackground" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneDisabledBrush}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBackground" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border 
+                            x:Name="ButtonBackground"
+                            Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}">
+                            <ContentControl x:Name="ContentContainer"
+                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Content="{TemplateBinding Content}"
+                                            ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TextButtonStyle" TargetType="Button" BasedOn="{StaticResource EmptyButtonStyle}">
+        <Setter Property="Margin" Value="12,12,0,0"/>
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiLight}"/>
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeExtraLarge}"/>
+    </Style>
+
+    <Style x:Key="StatusRectangleStyle" TargetType="Rectangle">       
+        <Setter Property="Height" Value="36"/>
+        <Setter Property="Width" Value="36"/>
+    </Style>
+
+    <Style x:Key="DefaultPhoneTextAccentStyle" TargetType="TextBlock" 
+           BasedOn="{StaticResource PhoneTextAccentStyle}">
+        <Setter Property="Margin" Value="0"/>
+    </Style>
+
+    <Style x:Key="TitleStyle" TargetType="TextBlock" BasedOn="{StaticResource PhoneTextNormalStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiBold}"/>
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}"/>
+    </Style>
+
+    <Thickness x:Key="DistanceBetweenStatusAndText">
+        12,0,0,0
+    </Thickness>
+    
+    <!-- Theme dependence resources-->
+
+    <ImageBrush x:Name="MainPanoramaBackground" ImageSource="/Themes/Resources/Images/PanoramaBackground.jpg"/>
+    <ImageBrush x:Name="AboutPageBackground" ImageSource="/Themes/Resources/Images/AboutPageBackground.jpg"/>
+
+    <BitmapImage x:Key="CactusSoftLogoColoredImageSource" UriSource="/Themes/Resources/Images/CactussoftLogoColored.png"/>
+
+    <BitmapImage x:Key="ZabbkitLogoSource" UriSource="/Themes/Resources/Images/ZabbKitLogo.png"/>
+
+</ResourceDictionary>

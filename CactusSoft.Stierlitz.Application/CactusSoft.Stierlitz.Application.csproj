@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1635401E-2406-4971-A3B3-CFBA2A8EDCF2}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CactusSoft.Stierlitz.Application</RootNamespace>
+    <AssemblyName>CactusSoft.Stierlitz.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>en-US;ru-RU</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>CactusSoft.Zabbkit.Application.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>CactusSoft.Stierlitz.Application.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Diagnostics|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Diagnostics</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;DIAGNOSTICS</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro">
+      <HintPath>..\packages\Caliburn.Micro.1.4\lib\wp71\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Extensions">
+      <HintPath>..\packages\Caliburn.Micro.1.4\lib\wp71\Caliburn.Micro.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Threading.Tasks" Condition="'$(VisualStudioVersion)'=='11.0'">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks" Condition="'$(VisualStudioVersion)'=='11.0'">
+      <HintPath>..\packages\Microsoft.Bcl.1.0.19\lib\sl4-windowsphone71\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="AsyncCtpLibrary_Phone" Condition="'$(VisualStudioVersion)'!='11.0'">
+      <HintPath>..\packages\AsyncCTP\AsyncCtpLibrary_Phone.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2012.3.1016.2040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TelerikForWindowsPhone\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Tequila.Phone.System.Extensions">
+      <HintPath>..\packages\Tequila\bin\$(Configuration)\Tequila.Phone.System.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Telerik.Windows.Controls.Primitives, Version=2012.3.1016.2040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TelerikForWindowsPhone\Telerik.Windows.Controls.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Core, Version=2012.3.1016.2040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TelerikForWindowsPhone\Telerik.Windows.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CactusSoft.Stierlitz.Common\CactusSoft.Stierlitz.Common.csproj">
+      <Project>{AE4C93FF-E681-487D-9AFA-5C051384EDCC}</Project>
+      <Name>CactusSoft.Stierlitz.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CactusSoft.Stierlitz.Localization\CactusSoft.Stierlitz.Localization.csproj">
+      <Project>{b922fdeb-9555-4a54-8c4c-d805b03b2ba4}</Project>
+      <Name>CactusSoft.Stierlitz.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CactusSoft.Stierlitz.Domain\CactusSoft.Stierlitz.Domain.csproj">
+      <Project>{a009d1c1-37c0-45a4-a028-e352ac9ddbd3}</Project>
+      <Name>CactusSoft.Stierlitz.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CactusSoft.Stierlitz.Services\CactusSoft.Stierlitz.Services.csproj">
+      <Project>{703F6843-215A-49F2-8656-60B03F90BE6D}</Project>
+      <Name>CactusSoft.Stierlitz.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AliveChecker.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties/GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Converters\ByteArrayToBitmapImageConverter.cs" />
+    <Compile Include="Converters\Extensions.cs" />
+    <Compile Include="Converters\EventViewModelToColorConverter.cs" />
+    <Compile Include="Converters\HostsToStringConverter.cs" />
+    <Compile Include="Converters\TimespanToDurationConverter.cs" />
+    <Compile Include="Converters\ToUpperCaseConverter.cs" />
+    <Compile Include="Converters\TriggerToColorConverter.cs" />
+    <Compile Include="Helpers\INavigationServiceResolver.cs" />
+    <Compile Include="Helpers\NavigationServiceResolver.cs" />
+    <Compile Include="Helpers\NetworkStateManager.cs" />
+    <Compile Include="Helpers\PluralFormHelper.cs" />
+    <Compile Include="Helpers\ThemeHelper.cs" />
+    <Compile Include="Interactivity\ItemsControlBehavior.cs" />
+    <Compile Include="Messages\PeriodChangedMessage.cs" />
+    <Compile Include="Helpers\AnaliticsNavigationPageLogger.cs" />
+    <Compile Include="Services\ErrorHandler.cs" />
+    <Compile Include="Services\ErrorReporter.cs" />
+    <Compile Include="Services\IPushChannelService.cs" />
+    <Compile Include="Services\IsolatedStorageFactory.cs" />
+    <Compile Include="Services\IsolatedStorageRepository.cs" />
+    <Compile Include="Services\LogService.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Bootstrapper.Designer.cs">
+      <DependentUpon>Bootstrapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SafeHyperlinkButton.cs" />
+    <Compile Include="ApplicationConfiguration.cs" />
+    <Compile Include="Converters\BoolToInvertedBoolConverter.cs" />
+    <Compile Include="Converters\ToLowerCaseConverter.cs" />
+    <Compile Include="Services\MessagingService.cs" />
+    <Compile Include="Interactivity\PasswordBoxUpdateBindingBehavior.cs" />
+    <Compile Include="Interactivity\TextBoxUpdateBindingBehavior.cs" />
+    <Compile Include="Messages\ServersChangedMessage.cs" />
+    <Compile Include="Messages\ServerDeletedMessage.cs" />
+    <Compile Include="Messages\ServerSelectedMessage.cs" />
+    <Compile Include="Services\PushChannelService.cs" />
+    <Compile Include="Settings\UserCredentialsEncryptService.cs" />
+    <Compile Include="MetroGridHelper.cs" />
+    <Compile Include="Settings\ApplicationSettings.cs" />
+    <Compile Include="Helpers\GlobalBusyIndicatorManager.cs" />
+    <Compile Include="Helpers\Executer.cs" />
+    <Compile Include="Settings\SettingsStorage.cs" />
+    <Compile Include="StorageHandlers\Base\ConductorViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\PushSettingsPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\MainPageViewModelStorageHandlerEx.cs" />
+    <Compile Include="StorageHandlers\CustomPeriodPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\EventsPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\GraphPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\MainPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\HostTriggersPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\HostsPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\ServersPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\LoginPageViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\Base\ScreenViewModelStorageHandler.cs" />
+    <Compile Include="StorageHandlers\WebConfigurationStorageHandler.cs" />
+    <Compile Include="Themes\AnimationFabric.cs" />
+    <Compile Include="UserControls\EventUserControl.xaml.cs">
+      <DependentUpon>EventUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AboutPageViewModel.cs" />
+    <Compile Include="ViewModels\Base\IMainHubScreen.cs" />
+    <Compile Include="ViewModels\Base\ItemsScreenWithGraphs.cs" />
+    <Compile Include="ViewModels\Base\LoadItemsScreenBase.cs" />
+    <Compile Include="ViewModels\Base\IUpdate.cs" />
+    <Compile Include="ViewModels\Base\TriggersScreen.cs" />
+    <Compile Include="ViewModels\Base\UpdateItemsScreen.cs" />
+    <Compile Include="ViewModels\DataItemViewModel.cs" />
+    <Compile Include="ViewModels\DataPageViewModel.cs" />
+    <Compile Include="ViewModels\PushSettingsPageViewModel.cs" />
+    <Compile Include="ViewModels\FavoritesHub\IFavoritesViewModel.cs" />
+    <Compile Include="ViewModels\FavoritesHub\GraphsViewModel.cs" />
+    <Compile Include="ViewModels\FavoritesHub\TriggersViewModel.cs" />
+    <Compile Include="ViewModels\FavoritesPageViewModel.cs" />
+    <Compile Include="ViewModels\MainHub\FavoritesViewModel.cs" />
+    <Compile Include="ViewModels\TimelinePageViewModel.cs" />
+    <Compile Include="ViewModels\Base\EventsScreen.cs" />
+    <Compile Include="ViewModels\EventsPageViewModel.cs" />
+    <Compile Include="ViewModels\EventViewModel.cs" />
+    <Compile Include="ViewModels\GraphPageViewModel.cs" />
+    <Compile Include="ViewModels\GraphsPageViewModel.cs" />
+    <Compile Include="ViewModels\Period\CustomPeriodPageViewModel.cs" />
+    <Compile Include="ViewModels\Period\PeriodPageViewModel.cs" />
+    <Compile Include="ViewModels\Period\PeriodViewModel.cs" />
+    <Compile Include="ViewModels\HostTriggersPageViewModel.cs" />
+    <Compile Include="ViewModels\HostsPageViewModel.cs" />
+    <Compile Include="ViewModels\TriggersPageViewModel.cs" />
+    <Compile Include="Views\DataPage.xaml.cs">
+      <DependentUpon>DataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PushSettingsPage.xaml.cs">
+      <DependentUpon>PushSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CulturePhoneApplicationPage.cs" />
+    <Compile Include="Views\FavoritesHub\GraphsView.xaml.cs">
+      <DependentUpon>GraphsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FavoritesHub\TriggersView.xaml.cs">
+      <DependentUpon>TriggersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FavoritesPage.xaml.cs">
+      <DependentUpon>FavoritesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainHub\FavoritesView.xaml.cs">
+      <DependentUpon>FavoritesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TimelinePage.xaml.cs">
+      <DependentUpon>TimelinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EventsPage.xaml.cs">
+      <DependentUpon>EventsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GraphPage.xaml.cs">
+      <DependentUpon>GraphPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HostsPage.xaml.cs">
+      <DependentUpon>HostsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TriggersPage.xaml.cs">
+      <DependentUpon>TriggersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Period\CustomPeriodPage.xaml.cs">
+      <DependentUpon>CustomPeriodPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Period\PeriodPage.xaml.cs">
+      <DependentUpon>PeriodPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HostTriggersPage.xaml.cs">
+      <DependentUpon>HostTriggersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GraphsPage.xaml.cs">
+      <DependentUpon>GraphsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainHub\TriggersViewModel.cs" />
+    <Compile Include="ViewModels\Base\LoadItemsScreen.cs" />
+    <Compile Include="ViewModels\MainHub\TimelineViewModel.cs" />
+    <Compile Include="ViewModels\MainHub\OverviewViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\ServersPageViewModel.cs" />
+    <Compile Include="ViewModels\ServerPickerPageViewModel.cs" />
+    <Compile Include="ViewModels\LoginPageViewModel.cs" />
+    <Compile Include="Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainHub\TriggersView.xaml.cs">
+      <DependentUpon>TriggersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainHub\TimelineView.xaml.cs">
+      <DependentUpon>TimelineView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainHub\OverviewView.xaml.cs">
+      <DependentUpon>OverviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ServersPage.xaml.cs">
+      <DependentUpon>ServersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ServerPickerPage.xaml.cs">
+      <DependentUpon>ServerPickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HostGroupsPage.xaml.cs">
+      <DependentUpon>HostGroupsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\HostGroupsPageViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Themes\Styles.Light.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <LastGenOutput>Styles.Light.Designer.cs</LastGenOutput>
+      <DependentUpon>Styles.xaml</DependentUpon>
+    </Page>
+    <Page Include="Themes\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\EventUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DataPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PushSettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FavoritesHub\GraphsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FavoritesHub\TriggersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FavoritesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainHub\FavoritesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TimelinePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EventsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GraphPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TriggersPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HostsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Period\CustomPeriodPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HostTriggersPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Period\PeriodPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GraphsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainHub\TriggersView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainHub\TimelineView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainHub\OverviewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ServersPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ServerPickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HostGroupsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Themes\Resources\ApplicationBar\About.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Background.png" />
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Add.png" />
+    <Content Include="Themes\Resources\ApplicationBar\appbar.subscribe.png" />
+    <Content Include="Themes\Resources\ApplicationBar\appbar.unsubscribe.png" />
+    <Content Include="Themes\Resources\ApplicationBar\arrow.next.png" />
+    <Content Include="Themes\Resources\ApplicationBar\arrow.previous.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Data.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Graph.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Exit.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Mail.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Ok.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Period.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Save.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Cancel.png" />
+    <Content Include="Themes\Resources\ApplicationBar\Refresh.png" />
+    <Content Include="Themes\Resources\Images\AboutPageBackground.jpg" />
+    <Content Include="Themes\Resources\Images\AboutPageBackgroundLight.jpg" />
+    <Content Include="Themes\Resources\Images\CactussoftLogoColored.png" />
+    <Content Include="Themes\Resources\Images\CactussoftLogo.png" />
+    <Content Include="Themes\Resources\Images\CactussoftLogoColoredLight.png" />
+    <Content Include="Themes\Resources\Images\PanoramaBackground.jpg" />
+    <Content Include="Themes\Resources\Images\PanoramaBackgroundLight.jpg" />
+    <Content Include="Themes\Resources\Images\ZabbKitLogo.png" />
+    <Content Include="Themes\Resources\Images\ZabbKitLogoLight.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.5\tools\Microsoft.Bcl.Build.targets" Condition="'$(VisualStudioVersion)'=='11.0'" />
+</Project>

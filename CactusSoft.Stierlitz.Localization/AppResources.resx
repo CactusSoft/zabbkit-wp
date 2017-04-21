@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddServer" xml:space="preserve">
+    <value>Add server...</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>ZABBKIT</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RememberMeLabel" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="ServerLabel" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="UsernameLabel" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="NewServerTitle" xml:space="preserve">
+    <value>new server</value>
+  </data>
+  <data name="NameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ServerAlreadyExist" xml:space="preserve">
+    <value>Server already exist</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="NetworkConnectionProblemError" xml:space="preserve">
+    <value>Cannot connect to Internet. Please check your connection settings and try again</value>
+  </data>
+  <data name="AboutAppTitle" xml:space="preserve">
+    <value>ABOUT ZABBKIT</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="AllRightsReservedLabel" xml:space="preserve">
+    <value>All Rights Reserved.</value>
+  </data>
+  <data name="ApplicationVersionLabel" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="CopyrightLabel" xml:space="preserve">
+    <value>Copyright © 2012, CactusSoft. All Rights Reserved.</value>
+  </data>
+  <data name="PoweredByLabel" xml:space="preserve">
+    <value>Developed by</value>
+  </data>
+  <data name="SupportLinkLabel" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="UserAgreementTitle" xml:space="preserve">
+    <value>user agreement</value>
+  </data>
+  <data name="AuthorizationFailedError" xml:space="preserve">
+    <value>Authentication failed.</value>
+  </data>
+  <data name="ServerCommunicationErrorHasOccured" xml:space="preserve">
+    <value>Server communication error</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="CriticalErrorHasOccured" xml:space="preserve">
+    <value>An error occurred.</value>
+  </data>
+  <data name="InvalidZabbixServerUri" xml:space="preserve">
+    <value>The specified "Zabbix" server url is invalid</value>
+  </data>
+  <data name="HostGroupsTitle" xml:space="preserve">
+    <value>host groups</value>
+  </data>
+  <data name="ErrorReportMessage" xml:space="preserve">
+    <value>The application Zabbkit has stopped unexpectedly. Send report?</value>
+  </data>
+  <data name="NoHostGroupsFound" xml:space="preserve">
+    <value>No host groups found</value>
+  </data>
+  <data name="OverviewTitle" xml:space="preserve">
+    <value>overview</value>
+  </data>
+  <data name="TriggersTitle" xml:space="preserve">
+    <value>Triggers</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>View all</value>
+  </data>
+  <data name="WebTitle" xml:space="preserve">
+    <value>web</value>
+  </data>
+  <data name="HostsTitle" xml:space="preserve">
+    <value>hosts</value>
+  </data>
+  <data name="ServersTitle" xml:space="preserve">
+    <value>servers</value>
+  </data>
+  <data name="NoTriggersFound" xml:space="preserve">
+    <value>No triggers found</value>
+  </data>
+  <data name="EventsTitle" xml:space="preserve">
+    <value>events</value>
+  </data>
+  <data name="Severity" xml:space="preserve">
+    <value>Severity</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="AllEventsTitle" xml:space="preserve">
+    <value>all events</value>
+  </data>
+  <data name="DayEventsTitle" xml:space="preserve">
+    <value>day events</value>
+  </data>
+  <data name="HostLabel" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="NoEventsFound" xml:space="preserve">
+    <value>No events found</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>timeline</value>
+  </data>
+  <data name="TriggerLabel" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="Graphs" xml:space="preserve">
+    <value>Graphs</value>
+  </data>
+  <data name="NoGraphsFound" xml:space="preserve">
+    <value>No graphs found</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="DayFirstForm" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="DaySecondForm" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="HoursFirstForm" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="HoursSecondForm" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="MonthFirstForm" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="MonthSecondForm" xml:space="preserve">
+    <value>months</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="PleaseRateApplicationDoNotShowAgainText" xml:space="preserve">
+    <value>Do not show this reminder again</value>
+  </data>
+  <data name="PleaseRateApplicationMessage" xml:space="preserve">
+    <value>Hope you are enjoying using the application!
+
+We will be glad to hear your feedback.</value>
+  </data>
+  <data name="PleaseRateApplicationMessageTitle" xml:space="preserve">
+    <value>Would you like to rate the application in Marketplace?</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>favorites</value>
+  </data>
+  <data name="AllEvents" xml:space="preserve">
+    <value>All events</value>
+  </data>
+  <data name="AllTriggers" xml:space="preserve">
+    <value>All triggers</value>
+  </data>
+  <data name="ShortDay" xml:space="preserve">
+    <value>d</value>
+  </data>
+  <data name="ShortHour" xml:space="preserve">
+    <value>h</value>
+  </data>
+  <data name="ShortMinute" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="ShortSecond" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="TitleLogin" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="AppBarAbout" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="AppBarAdd" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="AppBarCancel" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="AppBarGraphs" xml:space="preserve">
+    <value>graphs</value>
+  </data>
+  <data name="AppBarLogin" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="AppBarLogout" xml:space="preserve">
+    <value>log out</value>
+  </data>
+  <data name="AppBarNext" xml:space="preserve">
+    <value>next</value>
+  </data>
+  <data name="AppBarPeriod" xml:space="preserve">
+    <value>period</value>
+  </data>
+  <data name="AppBarPrevious" xml:space="preserve">
+    <value>previous</value>
+  </data>
+  <data name="AppBarRefresh" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="AppBarSave" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="AppBarSubscribe" xml:space="preserve">
+    <value>subscribe</value>
+  </data>
+  <data name="AppBarUnsubscribe" xml:space="preserve">
+    <value>unsubscribe</value>
+  </data>
+  <data name="DayThirdForm" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="HoursThirdForm" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="MonthThirdForm" xml:space="preserve">
+    <value>months</value>
+  </data>
+  <data name="NoServersFound" xml:space="preserve">
+    <value>No servers found</value>
+  </data>
+  <data name="ErrorMailSubject" xml:space="preserve">
+    <value>Zabbkit: Unhandled exception</value>
+  </data>
+  <data name="SupportMailSubject" xml:space="preserve">
+    <value>Zabbkit: Support</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>This is a client-application for Zabbix monitoring system.
+Thanks to the app you will always be updated on your server's condition.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="PushSettingsTitle" xml:space="preserve">
+    <value>push settings</value>
+  </data>
+  <data name="PushToken" xml:space="preserve">
+    <value>Your id:</value>
+  </data>
+  <data name="WPDeviceToken" xml:space="preserve">
+    <value>Zabbkit notification ID</value>
+  </data>
+  <data name="ZabbixLinkText" xml:space="preserve">
+    <value>It's possible to receive push notifications about server events on your smartphone. 
+Detailed instructions are available on Zabbix comunity forum:</value>
+  </data>
+  <data name="AppBarPushSettings" xml:space="preserve">
+    <value>notifications</value>
+  </data>
+  <data name="IdError" xml:space="preserve">
+    <value>Error while obtaining ID</value>
+  </data>
+  <data name="OldDateVersionMessage" xml:space="preserve">
+    <value>Zabbkit application moves on another development acoout in market place. This version has already deleted from market and won't be supported in future, but the new one is available. In order to migrate to the new version, please, delete this app and download the new version from Market Place. Zabbkit continues to be free without advertizing. Sorry for inconvinience.</value>
+  </data>
+  <data name="AppBarData" xml:space="preserve">
+    <value>data</value>
+  </data>
+  <data name="DataTitle" xml:space="preserve">
+    <value>data</value>
+  </data>
+</root>

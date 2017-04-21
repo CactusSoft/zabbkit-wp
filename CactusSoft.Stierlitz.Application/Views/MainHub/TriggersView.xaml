@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="CactusSoft.Stierlitz.Application.Views.MainHub.TriggersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:triggers="clr-namespace:CactusSoft.Stierlitz.Application.Interactivity"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}">
+
+    <Grid x:Name="LayoutRoot" Margin="12,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer>
+            <ItemsControl Grid.Row="0"
+                          ItemsSource="{Binding Items}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{StaticResource EmptyButtonStyle}" 
+                                        cal:Message.Attach="[Event Tap] = [Action NavigateToEvents($dataContext)]" 
+                                        Margin="0,12,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Fill="{Binding Converter={StaticResource TriggerToColorConverter}}"
+                                           VerticalAlignment="Top"
+                                           Margin="0,7,0,0"
+                                           Style="{StaticResource StatusRectangleStyle}"/>
+                                <StackPanel Margin="{StaticResource DistanceBetweenStatusAndText}">                    
+                                    <TextBlock Text="{Binding Description}"
+                                               FontSize="{StaticResource PhoneFontSizeMedium}"
+                                               TextWrapping="Wrap"
+                                               Width="380"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.HostLabel, StringFormat=\{0\}:&#160; }"
+                                                   FontSize="{StaticResource PhoneFontSizeSmall}"
+                                                   Style="{StaticResource DefaultPhoneTextAccentStyle}"/>
+                                        <TextBlock Text="{Binding Hosts, Converter={StaticResource HostsToStringConverter}}"
+                                                   TextWrapping="Wrap"
+                                                   FontSize="{StaticResource PhoneFontSizeSmall}"
+                                                   Style="{StaticResource DefaultPhoneTextAccentStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <i:Interaction.Behaviors>
+                    <triggers:ItemsControlBehavior />
+                </i:Interaction.Behaviors>
+            </ItemsControl>
+        </ScrollViewer>
+        <TextBlock Grid.Row="0"
+                   TextWrapping="Wrap"
+                   Visibility="{Binding IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"
+                   Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.NoTriggersFound}">
+        </TextBlock>
+        <Button Grid.Row="1"
+                Margin="0,0,0,104"
+                VerticalAlignment="Bottom"
+                Content="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.AllTriggers}"
+                Style="{StaticResource TextButtonStyle}"
+                IsEnabled="{Binding IsEmpty, Converter={StaticResource BoolToInvertedBoolConverter}}"
+                cal:Message.Attach="[Event Tap] = [Action NavigateToTriggers]"/>
+    </Grid>
+</UserControl> 

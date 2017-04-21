@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- NOTE: Put only standard SolidColorBrush overrides here -->
+
+    <!--<SolidColorBrush x:Key="PhoneForegroundBrush" Color="#FFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneBackgroundBrush" Color="#FF000000"/>-->
+    <!--<SolidColorBrush x:Key="PhoneContrastForegroundBrush" Color="#FF000000"/>-->
+    <!--<SolidColorBrush x:Key="PhoneContrastBackgroundBrush" Color="#FFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneTextCaretBrush" Color="#FF000000"/>-->
+    <!--<SolidColorBrush x:Key="PhoneTextBoxBrush" Color="#BFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneTextBoxForegroundBrush" Color="#FF000000"/>-->
+    <!--<SolidColorBrush x:Key="PhoneTextBoxEditBackgroundBrush" Color="#FFFFFFFF" />-->
+    <!--<SolidColorBrush x:Key="PhoneTextBoxEditBorderBrush" Color="#FFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneTextBoxReadOnlyBrush" Color="#77000000"/>-->
+    <!--<SolidColorBrush x:Key="PhoneTextBoxSelectionForegroundBrush" Color="#FFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneSubtleBrush" Color="#99FFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneRadioCheckBoxBrush" Color="#BFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneRadioCheckBoxDisabledBrush" Color="#66FFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneRadioCheckBoxCheckBrush" Color="#FF000000"/>-->
+    <!--<SolidColorBrush x:Key="PhoneRadioCheckBoxCheckDisabledBrush" Color="#66000000"/>-->
+    <!--<SolidColorBrush x:Key="PhoneRadioCheckBoxPressedBrush" Color="#FFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneRadioCheckBoxPressedBorderBrush" Color="#FFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="TransparentBrush" Color="Transparent"/>-->
+    <!--<SolidColorBrush x:Key="PhoneDisabledBrush" Color="#66FFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneSemitransparentBrush" Color="#AA000000"/>-->
+    <!--<SolidColorBrush x:Key="PhoneChromeBrush" Color="#FF1F1F1F"/>-->
+    <!--<SolidColorBrush x:Key="PhoneAccentBrush" Color="{StaticResource PhoneAccentColor}"/>-->
+
+    <!-- Deprecated brushes -->
+    <!--<SolidColorBrush x:Key="PhoneInactiveBrush" Color="#33FFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneInverseInactiveBrush" Color="#FFCCCCCC"/>-->
+    <!--<SolidColorBrush x:Key="PhoneInverseBackgroundBrush" Color="#FFFFFFFF"/>-->
+    <!--<SolidColorBrush x:Key="PhoneBorderBrush" Color="#BFFFFFFF"/>-->
+    
+</ResourceDictionary>

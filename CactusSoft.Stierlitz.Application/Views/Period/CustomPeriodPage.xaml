@@ -1,0 +1,74 @@
+﻿<views:CulturePhoneApplicationPage 
+    x:Class="CactusSoft.Stierlitz.Application.Views.Period.CustomPeriodPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+    xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+    xmlns:views="clr-namespace:CactusSoft.Stierlitz.Application.Views"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
+    Style="{StaticResource DefaultPhoneApplicationPageStyle}">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid Margin="0,32,0,0" x:Name="ContentLayout">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock x:Name="ApplicationTitle" Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.Custom, Converter={StaticResource ToUpperCaseConverter}}" Style="{StaticResource TitleStyle}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <StackPanel>
+                    <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.StartDate, StringFormat=\{0\}:}" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0,0,0"/>
+                    <telerikInput:RadDatePicker SelectorFormat="d/m/y" 
+                                                Value="{Binding Date, Mode=TwoWay}"
+                                                cal:Message.Attach="[Event ValueChanged] = [Action OnDateTimeChanged()]"
+                                                MinValue="1/1/1970"
+                                                OkButtonIconUri="/Themes/Resources/ApplicationBar/Ok.png" 
+                                                CancelButtonIconUri="/Themes/Resources/ApplicationBar/Cancel.png"/>
+                    <telerikInput:RadTimePicker SelectorFormat="Hm" 
+                                                Culture="ru-RU"
+                                                cal:Message.Attach="[Event ValueChanged] = [Action OnDateTimeChanged()]"
+                                                Value="{Binding Time, Mode=TwoWay}"
+                                                OkButtonIconUri="/Themes/Resources/ApplicationBar/Ok.png" 
+                                                CancelButtonIconUri="/Themes/Resources/ApplicationBar/Cancel.png"/>
+                    <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.Period, StringFormat=\{0\}:}" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0,0,0"/>
+                    <telerikInput:RadTimeSpanPicker x:Name="TimeSpanPicker" SelectorFormat="wdh" MaxValue="720.0:0:0" MinValue="1:0:0"
+                                                    Value="{Binding Period, Mode=TwoWay}"
+                                                    DisplayValueFormat="dd'd'' 'h'h'"
+                                                    OkButtonIconUri="/Themes/Resources/ApplicationBar/Ok.png" 
+                                                    CancelButtonIconUri="/Themes/Resources/ApplicationBar/Cancel.png" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity="{StaticResource AppBarOpacity}">
+            <shell:ApplicationBar.Buttons>
+                <cal:AppBarButton x:Name="Save"
+                                  Text="Save"
+                                  IconUri="/Themes/Resources/ApplicationBar/Save.png"
+                                  Message="Save"/>
+                <cal:AppBarButton x:Name="Cancel"
+                                  Text="Cancel"
+                                  IconUri="/Themes/Resources/ApplicationBar/Cancel.png"
+                                  Message="Cancel"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</views:CulturePhoneApplicationPage>

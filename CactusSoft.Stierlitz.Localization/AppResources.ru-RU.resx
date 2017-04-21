@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddServer" xml:space="preserve">
+    <value>Добавить сервер</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>ZABBKIT</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="RememberMeLabel" xml:space="preserve">
+    <value>Запомнить</value>
+  </data>
+  <data name="ServerLabel" xml:space="preserve">
+    <value>Сервер</value>
+  </data>
+  <data name="UsernameLabel" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="NewServerTitle" xml:space="preserve">
+    <value>новый сервер</value>
+  </data>
+  <data name="NameLabel" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="ServerAlreadyExist" xml:space="preserve">
+    <value>Сервер уже в списке</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="NetworkConnectionProblemError" xml:space="preserve">
+    <value>Не удается подключиться к Интернету. Пожалуйста, проверьте настройки подключения и повторите попытку.</value>
+  </data>
+  <data name="AboutAppTitle" xml:space="preserve">
+    <value>О ZABBKIT</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>о программе</value>
+  </data>
+  <data name="AllRightsReservedLabel" xml:space="preserve">
+    <value>Все права защищены.</value>
+  </data>
+  <data name="ApplicationVersionLabel" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="CopyrightLabel" xml:space="preserve">
+    <value>Copyright © 2012, CactusSoft. Все права защищены.</value>
+  </data>
+  <data name="PoweredByLabel" xml:space="preserve">
+    <value>Разработано</value>
+  </data>
+  <data name="SupportLinkLabel" xml:space="preserve">
+    <value>Связаться с нами</value>
+  </data>
+  <data name="UserAgreementTitle" xml:space="preserve">
+    <value>пользовательское соглашение</value>
+  </data>
+  <data name="AuthorizationFailedError" xml:space="preserve">
+    <value>Ошибка авторизации</value>
+  </data>
+  <data name="ServerCommunicationErrorHasOccured" xml:space="preserve">
+    <value>Ошибка связи с сервером</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>Внимание</value>
+  </data>
+  <data name="CriticalErrorHasOccured" xml:space="preserve">
+    <value>Произошла ошибка</value>
+  </data>
+  <data name="InvalidZabbixServerUri" xml:space="preserve">
+    <value>Некорректный URL  "Zabbix" сервера</value>
+  </data>
+  <data name="HostGroupsTitle" xml:space="preserve">
+    <value>Группы хостов</value>
+  </data>
+  <data name="ErrorReportMessage" xml:space="preserve">
+    <value>Во время работы приложения произошла ошибка. Отправить отчет?</value>
+  </data>
+  <data name="NoHostGroupsFound" xml:space="preserve">
+    <value>Список групп пуст</value>
+  </data>
+  <data name="OverviewTitle" xml:space="preserve">
+    <value>обзор</value>
+  </data>
+  <data name="TriggersTitle" xml:space="preserve">
+    <value>Триггеры</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="WebTitle" xml:space="preserve">
+    <value>Веб</value>
+  </data>
+  <data name="HostsTitle" xml:space="preserve">
+    <value>Хосты</value>
+  </data>
+  <data name="ServersTitle" xml:space="preserve">
+    <value>сервера</value>
+  </data>
+  <data name="NoTriggersFound" xml:space="preserve">
+    <value>Список триггеров пуст</value>
+  </data>
+  <data name="EventsTitle" xml:space="preserve">
+    <value>события</value>
+  </data>
+  <data name="Severity" xml:space="preserve">
+    <value>Важность</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Длительность</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="AllEventsTitle" xml:space="preserve">
+    <value>все события</value>
+  </data>
+  <data name="DayEventsTitle" xml:space="preserve">
+    <value>События дня</value>
+  </data>
+  <data name="HostLabel" xml:space="preserve">
+    <value>Хост</value>
+  </data>
+  <data name="NoEventsFound" xml:space="preserve">
+    <value>Список события пуст</value>
+  </data>
+  <data name="TimelineTitle" xml:space="preserve">
+    <value>события</value>
+  </data>
+  <data name="TriggerLabel" xml:space="preserve">
+    <value>Триггер</value>
+  </data>
+  <data name="Graphs" xml:space="preserve">
+    <value>Графики</value>
+  </data>
+  <data name="NoGraphsFound" xml:space="preserve">
+    <value>Список графиков пуст</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Загрузка</value>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>Другое значение</value>
+  </data>
+  <data name="DayFirstForm" xml:space="preserve">
+    <value>день</value>
+  </data>
+  <data name="DaySecondForm" xml:space="preserve">
+    <value>дня</value>
+  </data>
+  <data name="HoursFirstForm" xml:space="preserve">
+    <value>час</value>
+  </data>
+  <data name="HoursSecondForm" xml:space="preserve">
+    <value>часа</value>
+  </data>
+  <data name="MonthFirstForm" xml:space="preserve">
+    <value>месяц</value>
+  </data>
+  <data name="MonthSecondForm" xml:space="preserve">
+    <value>месяца</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Период</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Дата начала</value>
+  </data>
+  <data name="PleaseRateApplicationDoNotShowAgainText" xml:space="preserve">
+    <value>Больше не показывать</value>
+  </data>
+  <data name="PleaseRateApplicationMessage" xml:space="preserve">
+    <value>Надеемся, что вам понравилось наше приложение.
+
+Мы будем рады вашему отзыву!</value>
+  </data>
+  <data name="PleaseRateApplicationMessageTitle" xml:space="preserve">
+    <value>Оценить приложение в Marketplace?</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>избранное</value>
+  </data>
+  <data name="AllEvents" xml:space="preserve">
+    <value>Все события</value>
+  </data>
+  <data name="AllTriggers" xml:space="preserve">
+    <value>Все триггеры</value>
+  </data>
+  <data name="ShortDay" xml:space="preserve">
+    <value>д</value>
+  </data>
+  <data name="ShortHour" xml:space="preserve">
+    <value>ч</value>
+  </data>
+  <data name="ShortMinute" xml:space="preserve">
+    <value>м</value>
+  </data>
+  <data name="ShortSecond" xml:space="preserve">
+    <value>с</value>
+  </data>
+  <data name="TitleLogin" xml:space="preserve">
+    <value>логин</value>
+  </data>
+  <data name="AppBarAdd" xml:space="preserve">
+    <value>добавить</value>
+  </data>
+  <data name="AppBarCancel" xml:space="preserve">
+    <value>отмена</value>
+  </data>
+  <data name="AppBarGraphs" xml:space="preserve">
+    <value>графики</value>
+  </data>
+  <data name="AppBarLogin" xml:space="preserve">
+    <value>войти</value>
+  </data>
+  <data name="AppBarLogout" xml:space="preserve">
+    <value>выйти</value>
+  </data>
+  <data name="AppBarNext" xml:space="preserve">
+    <value>следующий</value>
+  </data>
+  <data name="AppBarPeriod" xml:space="preserve">
+    <value>период</value>
+  </data>
+  <data name="AppBarPrevious" xml:space="preserve">
+    <value>предыдущий</value>
+  </data>
+  <data name="AppBarRefresh" xml:space="preserve">
+    <value>обновить</value>
+  </data>
+  <data name="AppBarSave" xml:space="preserve">
+    <value>сохранить</value>
+  </data>
+  <data name="AppBarSubscribe" xml:space="preserve">
+    <value>добавить</value>
+  </data>
+  <data name="AppBarUnsubscribe" xml:space="preserve">
+    <value>удалить</value>
+  </data>
+  <data name="AppBarAbout" xml:space="preserve">
+    <value>о программе</value>
+  </data>
+  <data name="DayThirdForm" xml:space="preserve">
+    <value>дней</value>
+  </data>
+  <data name="HoursThirdForm" xml:space="preserve">
+    <value>часов</value>
+  </data>
+  <data name="MonthThirdForm" xml:space="preserve">
+    <value>месяцев</value>
+  </data>
+  <data name="NoServersFound" xml:space="preserve">
+    <value>Список серверов пуст</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>Это клиент-приложение для системы мониторинга Zabbix.
+С его помощью вы можете быть всегда в курсе о текущем состоянии вашего сервера.</value>
+  </data>
+  <data name="PushSettingsTitle" xml:space="preserve">
+    <value>настройки нотификаций</value>
+  </data>
+  <data name="PushToken" xml:space="preserve">
+    <value>Ваш id:</value>
+  </data>
+  <data name="WPDeviceToken" xml:space="preserve">
+    <value>Zabbkit ID для нотификаций</value>
+  </data>
+  <data name="ZabbixLinkText" xml:space="preserve">
+    <value>Вы можете получать пуш-уведомления о событиях на сервере прямо на ваш смартфон.
+Детальная инструкция по настройке доступна на официальном форуме Zabbix:</value>
+  </data>
+  <data name="AppBarPushSettings" xml:space="preserve">
+    <value>нотификации</value>
+  </data>
+  <data name="IdError" xml:space="preserve">
+    <value>Произошла ошибка поулчение ID</value>
+  </data>
+  <data name="OldDateVersionMessage" xml:space="preserve">
+    <value>Приложение Zabbkit сменило аккаунт разработчика в Market Place. Данная версия удалена из Market Place и больше не будет подддерживаться в будущем, но доступна новая версия под другим аккаунтом. Для обновления удалите данную версию и скачайте новую из Market Place. Zabbkit по-прежнему остается бесплатным приложением без какой либо рекламы. Извините за причиненные неудобства.</value>
+  </data>
+  <data name="AppBarData" xml:space="preserve">
+    <value>данные</value>
+  </data>
+  <data name="DataTitle" xml:space="preserve">
+    <value>данные</value>
+  </data>
+</root>

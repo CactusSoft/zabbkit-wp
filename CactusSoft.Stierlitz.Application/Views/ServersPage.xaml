@@ -1,0 +1,74 @@
+﻿<phone:PhoneApplicationPage x:Class="CactusSoft.Stierlitz.Application.Views.ServersPage"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:cal="http://www.caliburnproject.org"
+                            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                            xmlns:triggers="clr-namespace:CactusSoft.Stierlitz.Application.Interactivity"
+                            xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait" Orientation="Portrait"
+                            shell:SystemTray.IsVisible="True"
+                            Style="{StaticResource DefaultPhoneApplicationPageStyle}"
+                            mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,49,0,28">
+            <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.ApplicationName}"
+			           Style="{StaticResource TitleStyle}"/>
+            <TextBlock Margin="9,-7,0,0"
+                       Text="{Binding DisplayName, BindsDirectlyToSource=True, Mode=OneTime}"
+			           Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel>
+                <TextBlock Style="{StaticResource CaptionTextBlockStyle}" 
+                           Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.NameLabel, StringFormat=\{0\}:}"/>
+                <telerikPrimitives:RadTextBox Text="{Binding Name, BindsDirectlyToSource=True, Mode=TwoWay, TargetNullValue=''}" 
+                         IsEnabled="{Binding IsBusy, Converter={StaticResource BoolToInvertedBoolConverter}}"
+                         ClearButtonVisibility="Visible">
+                    <i:Interaction.Behaviors>
+                        <triggers:TextBoxUpdateBindingBehavior />
+                    </i:Interaction.Behaviors>
+                </telerikPrimitives:RadTextBox>
+                <TextBlock Style="{StaticResource CaptionTextBlockStyle}"
+                           Text="URI:"/>
+                <telerikPrimitives:RadTextBox Text="{Binding Uri, BindsDirectlyToSource=True, Mode=TwoWay, TargetNullValue=''}" 
+                         IsEnabled="{Binding IsBusy, Converter={StaticResource BoolToInvertedBoolConverter}}"
+                         ClearButtonVisibility="Visible">
+                    <i:Interaction.Behaviors>
+                        <triggers:TextBoxUpdateBindingBehavior />
+                    </i:Interaction.Behaviors>
+                </telerikPrimitives:RadTextBox>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity="{StaticResource AppBarOpacity}">
+            <shell:ApplicationBar.Buttons>
+                <cal:AppBarButton x:Name="Save"
+                                  Text="Save"
+                                  IconUri="/Themes/Resources/ApplicationBar/Save.png"
+                                  Message="Save"/>
+                <cal:AppBarButton x:Name="Cancel"
+                                  Text="Cancel"
+                                  IconUri="/Themes/Resources/ApplicationBar/Cancel.png"
+                                  Message="Cancel"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>
+    

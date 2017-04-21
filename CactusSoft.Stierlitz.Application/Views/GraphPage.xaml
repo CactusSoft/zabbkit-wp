@@ -1,0 +1,58 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="CactusSoft.Stierlitz.Application.Views.GraphPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:cal="http://www.caliburnproject.org"
+    xmlns:slideView="clr-namespace:Telerik.Windows.Controls.SlideView;assembly=Telerik.Windows.Controls.Primitives"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <ScrollViewer x:Name="Scroll" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <slideView:PanAndZoomImage Source="{Binding GraphData, Converter={StaticResource ByteArrayToBitmapImageConverter}}"
+                                        Stretch="Fill"
+                                        x:Name="GraphImage"
+                                        ZoomMode="None"
+                                        Width="1076"
+                                        Height="728"
+                                        MaximumZoom="2,2" Margin="0,0,0,72"/>
+        </ScrollViewer>
+        <StackPanel 
+            x:Name="ProgressContainer"
+            Orientation="Vertical" VerticalAlignment="Center" 
+            Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}" >
+                <TextBlock 
+                    x:Name="LoadingTextBlock"
+                    HorizontalAlignment="Center" 
+                    Visibility="{Binding IsFirstLoading, Converter={StaticResource BooleanToVisibilityConverter}}"
+                    Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.Loading, StringFormat=\{0\}...}"/> 
+            <ProgressBar 
+                x:Name="ProgressBar"
+                IsEnabled="{Binding IsBusy}"
+                Width="480"
+                HorizontalAlignment="Center" 
+                IsIndeterminate="{Binding IsBusy}" />
+        </StackPanel>
+    </Grid>
+   
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Opacity="{StaticResource AppBarOpacity}">
+            <cal:AppBarButton Text="previous" Message="Previous" IconUri="/Themes/Resources/ApplicationBar/arrow.previous.png" />
+            <cal:AppBarButton Text="next" Message="Next" IconUri="/Themes/Resources/ApplicationBar/arrow.next.png" />
+            <cal:AppBarButton Text="subscribe" Message="Subscribe" IconUri="/Themes/Resources/ApplicationBar/appbar.subscribe.png" />
+            <shell:ApplicationBar.MenuItems>
+                <cal:AppBarMenuItem Text="period" Message="ChangePeriod"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

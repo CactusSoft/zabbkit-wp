@@ -1,0 +1,83 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="CactusSoft.Stierlitz.Application.Views.HostTriggersPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+    xmlns:viewModels="clr-namespace:CactusSoft.Stierlitz.Application.ViewModels"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
+    Style="{StaticResource DefaultPhoneApplicationPageStyle}"
+    d:DataContext="{d:DesignInstance Type=viewModels:TriggersPageViewModel}">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid Margin="0,32,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock x:Name="ApplicationTitle" Text="{Binding Source={StaticResource LocalizedStrings}, Path=Resources.ApplicationName}" 
+                           Style="{StaticResource TitleStyle}"/>
+                <TextBlock x:Name="PageTitle" Text="{Binding DisplayName}" Margin="9,-7,0,0" 
+                           Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0">
+                <telerikPrimitives:RadDataBoundListBox x:Name="TriggersRadDataBoundListBox"
+                                                       Padding="0"
+                                                       ItemsSource="{Binding Items}"
+                                                       Style="{StaticResource ZabbixItemsRadDataBoundListBoxStyle}"
+                                                       ItemAddedAnimation="{Binding Source={StaticResource AnimationFabric}, Path=ItemAddedAnimation}">
+                    <telerikPrimitives:RadDataBoundListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Button Style="{StaticResource EmptyButtonStyle}" 
+                                    cal:Message.Attach="[Event Tap] = [Action NavigateToEvents($dataContext)]" 
+                                    Margin="24,12,0,0" >
+                                <StackPanel Orientation="Horizontal">
+                                    <Rectangle Fill="{Binding Converter={StaticResource TriggerToColorConverter}}"
+                                               VerticalAlignment="Top"
+                                               Margin="0,7,0,0"
+                                               Style="{StaticResource StatusRectangleStyle}"/>
+                                     <TextBlock Text="{Binding Description}"
+                                                Margin="{StaticResource DistanceBetweenStatusAndText}"
+                                                FontSize="{StaticResource PhoneFontSizeMedium}"
+                                                TextWrapping="Wrap"
+                                                Width="380"/>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </telerikPrimitives:RadDataBoundListBox.ItemTemplate>
+                </telerikPrimitives:RadDataBoundListBox>
+            </Grid>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity="{StaticResource AppBarOpacity}">
+            <shell:ApplicationBar.Buttons>
+                <cal:AppBarButton Text="data"
+                                  Message="NavigateToData"
+                                  IconUri="/Themes/Resources/ApplicationBar/Data.png"/>
+                <cal:AppBarButton Text="graphs"
+                                  Message="NavigateToGraphs"
+                                  IconUri="/Themes/Resources/ApplicationBar/Graph.png"/>
+                <cal:AppBarButton Text="refresh"
+                                  Message="Update"
+                                  IconUri="/Themes/Resources/ApplicationBar/Refresh.png"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

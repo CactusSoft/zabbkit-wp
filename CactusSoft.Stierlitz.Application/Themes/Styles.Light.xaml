@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ImageBrush x:Name="MainPanoramaBackground" ImageSource="/Themes/Resources/Images/PanoramaBackgroundLight.jpg"/>
+    <ImageBrush x:Name="AboutPageBackground" ImageSource="/Themes/Resources/Images/AboutPageBackgroundLight.jpg"/>
+    
+    <BitmapImage x:Key="CactusSoftLogoColoredImageSource" UriSource="/Themes/Resources/Images/CactussoftLogoColoredLight.png"/>
+
+    <BitmapImage x:Key="ZabbkitLogoSource" UriSource="/Themes/Resources/Images/ZabbKitLogoLight.png"/>
+
+</ResourceDictionary>
