@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{ffd0f80b-78cb-48f2-ab92-dc055f120d6d}" Title="Zabbkit" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="CactusSoft.Stierlitz.Application author" Description="Sample description" Publisher="CactusSoft.Stierlitz.Application">
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="" />
+  <Languages xmlns="">
+    <Language code="en-US" />
+    <Language code="ru-RU" />
+  </Languages>
+  <App xmlns="" ProductID="{ffd0f80b-78cb-48f2-ab92-dc055f120d6d}" Title="Zabbkit" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="CactusSoft.Stierlitz.Application author" Description="Sample description" Publisher="CactusSoft.Stierlitz.Application" PublisherID="{a8067726-446f-4cdd-9710-257f664aa1ec}">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_IDENTITY_DEVICE" />
@@ -13,13 +18,23 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="CactusSoft.Stierlitz.ApplicationToken" TaskName="_default">
-        <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+        <TemplateFlip>
+          <SmallImageURI IsResource="false" IsRelative="true">Background.png</SmallImageURI>
           <Count>0</Count>
+          <BackgroundImageURI IsResource="false" IsRelative="true">Background.png</BackgroundImageURI>
           <Title>Zabbkit</Title>
-          <!--<BackTitle>Zabbkit</BackTitle>-->
-        </TemplateType5>
+          <BackContent></BackContent>
+          <BackBackgroundImageURI></BackBackgroundImageURI>
+          <BackTitle></BackTitle>
+          <DeviceLockImageURI></DeviceLockImageURI>
+          <HasLarge>false</HasLarge>
+        </TemplateFlip>
       </PrimaryToken>
     </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
   </App>
 </Deployment>
